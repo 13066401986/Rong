@@ -1,0 +1,144 @@
+
+<html lang="en">  
+  
+    <head>  
+        <meta charset="UTF-8" />  
+        <title>Document</title>  
+        <style type="text/css">  
+            * {  
+                margin: 0px;  
+                padding: 0px;  
+            }  
+              
+            html,  
+            body {  
+                font-size: 19px;  
+                font-family: 'Verdana', 'Arial';  
+                color: rgba(0, 0, 0, 0.8);  
+                width: 100%;  
+                height: 100%; 
+			
+            }  
+              
+            .main {  
+                width: 100%;  
+                height: 100%;  
+                position: relative;  
+                background: url(1.jpg) center top;  
+                background-size: cover;  
+				
+            }  
+              
+            .content {  
+                width: 800px;  
+                height: 400px;  
+                position: absolute;  
+                top: 50%;  
+                left: 50%;  
+                overflow: hidden;  
+                margin-top: -200px;  
+                margin-left: -400px;  
+                border-radius: 10px;  
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);  
+                z-index: 100;  
+                padding: 50px;  
+                box-sizing: border-box;  
+                /*不会把盒子撑开*/  
+            }  
+              
+            .content::before {  
+                content: "";  
+                position: absolute;  
+                top: 0px;  
+                left: 0px;  
+                right: 0px;  
+                bottom: 0px;  
+                z-index: -1;  
+                /*-1 可以当背景*/  
+                -webkit-filter: blur(20px);  
+                filter: blur(20px);  
+                margin: -30px;  /*消除边缘透明*/  
+                background: url(1.jpg) center top;  
+                background-size: cover;  
+                /*平铺*/  
+                background-attachment: fixed;  
+                /*位置固定*/  
+            }  
+              
+            .content h1 {  
+                text-align: center;  
+                margin-bottom: 20px;  
+	background: #58a;
+background: linear-gradient(-45deg, transparent 15px,  #aaa 0) right,
+            linear-gradient(45deg, transparent 15px, #655 0) left;
+background-size: 50% 100%;
+background-repeat: no-repeat;
+
+            }  
+              
+            .content p {  
+                line-height: 1.7;  
+                /*1.7倍行间距*/  
+            }  
+			
+input[type="checkbox"] {
+    display: none;
+}
+input[type="checkbox"] + label {
+    display: inline-block;
+    width: 160px;
+    height: 80px;
+    position: relative;
+    -webkit-transition: 0.3s;
+    transition: 0.35s;
+    margin: 0px 270px;
+    box-sizing: border-box;
+}
+input[type="checkbox"] + label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 80px;
+    height: 80px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    cursor: pointer;
+}
+#simple_3:checked + label.green {
+    background: #5CB85C;
+}
+
+#simple_3:checked + label:after {
+    left: calc(100% - 80px);
+	
+}
+#simple_3 + label {
+    background: #ddd;
+    border-radius: 20px;
+    box-shadow: 1px 1px 3px #aaa;
+}
+#simple_3 + label:after {
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 1px 1px 3px #aaa;
+}
+      </style>  
+    </head> 
+
+ <body>  
+        <div class="main">  
+            <div class="content"> 
+                <h1>Destiny 2</h1>  
+                <p>The Grineer, with their endless clone armies, have plunged the system into chaos. There is only one force that can match them, you. You are Tenno, an ancient warrior, a master of gun and blade. You wield the mighty Warframes and command their awesome powers. Forge your weapons. Gather like-minded Tenno and take the fight back to the Grineer. The Origin System needs you once again. Are you ready?</p>  
+                
+                 <input type="checkbox" id="simple_3">
+    <label for="simple_3" class="green"></label>
+    
+            </div>  
+        </div>  
+      
+    </body>               
+
+</html>
